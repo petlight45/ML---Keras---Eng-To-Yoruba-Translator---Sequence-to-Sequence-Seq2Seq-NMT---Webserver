@@ -8,4 +8,5 @@ class MLConfig(AppConfig):
     verbose_name = _("Machine Learning")
 
     def ready(self):
-        from . import signals
+        from utils.ml.helpers import MLHelperUtils
+        MLHelperUtils.Model.load()
