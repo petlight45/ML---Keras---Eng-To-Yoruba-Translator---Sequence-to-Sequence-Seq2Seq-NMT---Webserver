@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: ./devops/docker/backend/Dockerfile
     image: backend:latest
-    command: bash -c "gunicorn config.asgi:application --workers 1 --bind 0.0.0.0:8000 --timeout 0 --log-level debug"
+    command: bash -c "gunicorn config.wsgi:application --workers 1 --bind 0.0.0.0:8000 --timeout 0 --log-level debug"
     env_file:
       - envs/.env
     restart: "on-failure"
