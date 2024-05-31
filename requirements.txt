@@ -6,6 +6,6 @@ djangorestframework==3.14.0
 pytz==2024.1
 sqlparse==0.4.4
 tzdata==2024.1
-tensorflow
-keras
+tensorflow==2.15.0
+keras==2.15.0
 gunicorn
